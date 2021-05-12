@@ -1,7 +1,9 @@
 #pragma once
 
-#include <parts.h>
-#include <io.h>
+#include <samd.h>
+#include <stddef.h>
+#include <stdint.h>
+#include <stdbool.h>
 #include "usb.h"
 
 extern UsbDeviceDescriptor usb_endpoints[];

@@ -205,9 +205,9 @@ inline void usb_ep0_stall(void) {
 
 void usb_set_speed(USB_Speed speed) {
 	if (USB_SPEED_FULL == speed) {
-		USB->DEVICE.CTRLB.bit.SPDCONF = USB_DEVICE_CTRLB_SPDCONF_0_Val;
+		USB->DEVICE.CTRLB.bit.SPDCONF = USB_DEVICE_CTRLB_SPDCONF_FS_Val;
 	} else if(USB_SPEED_LOW == speed) {
-		USB->DEVICE.CTRLB.bit.SPDCONF = USB_DEVICE_CTRLB_SPDCONF_1_Val;
+		USB->DEVICE.CTRLB.bit.SPDCONF = USB_DEVICE_CTRLB_SPDCONF_LS_Val;
 	}
 }
 USB_Speed usb_get_speed() {
